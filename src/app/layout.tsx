@@ -27,6 +27,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <div className="w-full p-5 bg-indigo-900 text-white uppercase">
+          full calendar view
+        </div>
         {children}
       </body>
     </html>
