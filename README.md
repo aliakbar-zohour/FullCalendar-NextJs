@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# README.md
 
-## Getting Started
+# 📅 Next.js FullCalendar Reservation System
 
-First, run the development server:
+یک سیستم رزرو حرفه‌ای با **Next.js 14**, **FullCalendar**, **Framer Motion**, و **react-multi-date-picker**
+این پروژه به شما امکان می‌دهد یک **تقویم رزرو فارسی (شمسی)** داشته باشید که شامل ویژگی‌های زیر است:
+
+---
+
+## ✨ ویژگی‌ها
+
+* 📌 **تقویم فارسی (شمسی) با پشتیبانی از FullCalendar**
+* ⏰ محدودیت ساعت رزرو (۸ صبح تا ۸ شب)
+* 🎨 رنگ‌بندی برای روزهای رزرو شده
+* 🚫 امکان بلاک کردن روزها (رزرو غیرممکن)
+* 👤 نمایش رزروها همراه با **عکس و نام کاربر**
+* 🔄 قابلیت **درگ و دراپ** و جابجایی رزروها
+* 🗓 نمایش در حالت‌های **ماه، هفته و روز**
+* 🖊 **مودال جزئیات رزرو** با قابلیت:
+
+  * نمایش اطلاعات کامل (کاربر، توضیحات، تاریخ شروع/پایان)
+  * ویرایش رزرو
+  * حذف رزرو
+* ➕ دکمه **ایجاد رزرو جدید**:
+
+  * انتخاب کاربر از API
+  * انتخاب تاریخ شروع و پایان با **تقویم شمسی فارسی**
+  * اضافه کردن توضیحات
+  * نمایش فوری روی تقویم
+
+---
+
+## 📸 پیش‌نمایش
+
+> 🔽 یک دموی تصویری اضافه کنید:
+> (اسکرین‌شات یا GIF از صفحه‌ی رزرو)
+
+```bash
+/screenshots/demo.gif
+```
+
+---
+
+## 🚀 راه‌اندازی پروژه
+
+### 1️⃣ کلون کردن مخزن
+
+```bash
+git clone https://github.com/your-username/reservation-calendar.git
+cd reservation-calendar
+```
+
+### 2️⃣ نصب وابستگی‌ها
+
+```bash
+npm install
+```
+
+### 3️⃣ اجرای پروژه در حالت توسعه
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+پروژه روی [http://localhost:3000](http://localhost:3000) اجرا می‌شود 🚀
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 تکنولوژی‌ها
 
-## Learn More
+* [Next.js 14](https://nextjs.org/) (App Router)
+* [FullCalendar](https://fullcalendar.io/) (تقویم قدرتمند)
+* [Framer Motion](https://www.framer.com/motion/) (انیمیشن‌ها)
+* [React Multi Date Picker](https://shahabyazdi.github.io/react-multi-date-picker/) (تاریخ‌پیکر شمسی فارسی)
+* [Tailwind CSS](https://tailwindcss.com/) (استایل‌دهی مدرن)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📂 ساختار پروژه
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/
+ ├─ api/
+ │   ├─ events/route.ts   # API ایونت‌ها (CRUD رزرو)
+ │   └─ users/route.ts    # API کاربران
+ ├─ calendar/page.tsx     # صفحه اصلی تقویم
+ └─ globals.css           # استایل‌ها
+```
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠 API Endpoints
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 📌 Events
+
+* `GET /api/events` → دریافت همه رزروها
+* `POST /api/events` → ساخت/ویرایش رزرو
+* `DELETE /api/events` → حذف رزرو
+
+### 📌 Users
+
+* `GET /api/users` → دریافت لیست کاربران (برای انتخاب رزرو)
+
+---
+
+## 👨‍💻 توسعه‌دهنده
+
+* ساخته شده توسط **[نام شما](https://github.com/your-username)** 💻
+* اگر این پروژه براتون مفید بود ⭐️ یادتون نره!
+
+---
+
+## 📜 لایسنس
+
+این پروژه تحت لایسنس MIT منتشر شده است.
